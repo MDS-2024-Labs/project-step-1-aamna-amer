@@ -1,5 +1,5 @@
 ## Fitness and Nutrition Management System
-Aamna Amer 74871567/ Suneet D’Silva - 51059153
+Aamna Amer 74871567 Suneet D’Silva - 51059153
 
 Create a tool for personal trainers to help their clients satisfy their personal fitness and nutrition goals.
 
