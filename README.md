@@ -59,16 +59,20 @@ It's methods include:
 ## Sub Package 2
 ### Module 1 - Macros
 
-Contains
+Contains the class Macros, which calculates macronutrient requirements and creates personalized nutrition plans based on user-defined goals.
 
 It's methods include:
 
-### Module 2 - Workout
+**calculate_macro_requirements()**
+  Ensures the caloric intake is populated and calculates the macronutrient requirements (proteins, carbs, and fats) based on the client's caloric intake.  
+  Default distribution:  
+  - 30% Protein  
+  - 40% Carbs  
+  - 30% Fats  
 
-Contains
+**customize_macro_distribution()**  
+  Allows the user to distribute macronutrients (proteins, carbs, and fats) across meals (e.g., breakfast, lunch, dinner, snacks). Ensures the distribution percentages are valid.
 
-It's methods include:
-
-
-
+**generate_nutrition_plan()**  
+  Generates a detailed nutrition plan based on the calculated macronutrient requirements and customized meal distributions. Displays calories and macronutrients for each meal.
 
