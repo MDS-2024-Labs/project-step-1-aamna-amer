@@ -56,10 +56,11 @@ It's methods include:
 
 **caloric_intake():** Calculate client's new caloric intake based on goals and maintenance calories. This will call caloric_change() first to avoid redundancy. Formula used is new caloric intake = maintenance calories - caloric change
 
+
 ## Sub Package 2
 ### Module 1 - Macros
 
-Contains the class Macros, which calculates macronutrient requirements and creates personalized nutrition plans based on user-defined goals.
+Contains the class Macros, which calculates macronutrient requirements and creates personalized nutrition plans based on user goals.
 
 It's methods include:
 
@@ -76,10 +77,9 @@ It's methods include:
 **generate_nutrition_plan()**  
   Generates a detailed nutrition plan based on the calculated macronutrient requirements and customized meal distributions. Displays calories and macronutrients for each meal.
 
-
 ### Module 2 - Workout Schedule
 
-Contains the class `WorkoutSchedule`, which helps users create, display, and customize workout schedules based on their preferences.
+Contains the class WorkoutSchedule, which helps users create, display, and customize workout schedules based on their preferences.
 
 It's methods include:
 
