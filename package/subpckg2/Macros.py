@@ -2,7 +2,7 @@
 
 
 from tabulate import tabulate
-from subpckg1.Goals import Goals
+from package.subpckg1.Goals import Goals
 
 class Macros:
     """

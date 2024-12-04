@@ -1,5 +1,5 @@
-from subpckg1.PersonalSummary import PersonalSummary
-from subpckg1.EnergyRequirements import EnergyRequirements
+from package.subpckg1.PersonalSummary import PersonalSummary
+from package.subpckg1.EnergyRequirements import EnergyRequirements
 from tabulate import tabulate
 
 class Goals(EnergyRequirements):
@@ -26,25 +26,29 @@ class Goals(EnergyRequirements):
             self.weight_gain = int(input("How much weight do you want to gain? Please enter in lbs"))
             self.timeline = int(input("By when do you want to acheive this? Please answer in days"))
 
-
+        
     def caloric_change(self):
         "Calculate caloric change needed for goal weight loss/gain. This is based off that 1 lb = 3500 calories"
-
-        #caloric change = desired weight loss/gain (pounds) x 3500/ number of days
+        
+        # Calculate caloric change based on weight loss or gain
         if self.goal == "weight loss":
-            #for weight loss. adding negative sign to make this variable negative for later use
-            self.caloric_change = -((self.weight_loss * 3500)/self.timeline)
+            # For weight loss, adding a negative sign for caloric reduction
+            caloric_change_value = -((self.weight_loss * 3500) / self.timeline)
         else:
-            #for weight gain
-            self.caloric_change = (self.weight_gain * 3500)/self.timeline
-
-        return self.caloric_change
-
+            # For weight gain
+            caloric_change_value = (self.weight_gain * 3500) / self.timeline
+       
+        # Store the value in a distinct attribute
+        self.caloric_change_value = caloric_change_value
+        return self.caloric_change_value  # Return the calculated value
+   
     def caloric_intake(self):
         "Calculate client's new caloric intake based on goals and maintenance calories"
-
-        self.caloric_change()  #calculate caloric change
-
-        #new caloric intake = maintenance calories - caloric change. using + as weight loss will already have been made negative
-        self.caloric_intake = round(self.TDEE + self.caloric_change)
-        print("Your new daily caloric intake is ", round(self.caloric_intake))
+       
+        # Explicitly call the caloric_change method to get its value
+        self.caloric_change()
+        
+        # Store new caloric intake as a separate attribute
+        self.daily_caloric_intake = round(self.TDEE + self.caloric_change_value)
+        print("Your new daily caloric intake is ", self.daily_caloric_intake)
+        return self.daily_caloric_intake  # Return the value
