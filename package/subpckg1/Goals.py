@@ -26,28 +26,6 @@ class Goals(EnergyRequirements):
             self.weight_gain = int(input("How much weight do you want to gain? Please enter in lbs"))
             self.timeline = int(input("By when do you want to acheive this? Please answer in days"))
 
-
-#     def caloric_change(self):
-#         "Calculate caloric change needed for goal weight loss/gain. This is based off that 1 lb = 3500 calories"
-
-#         #caloric change = desired weight loss/gain (pounds) x 3500/ number of days
-#         if self.goal == "weight loss":
-#             #for weight loss. adding negative sign to make this variable negative for later use
-#             self.caloric_change = -((self.weight_loss * 3500)/self.timeline)
-#         else:
-#             #for weight gain
-#             self.caloric_change = (self.weight_gain * 3500)/self.timeline
-
-#         return self.caloric_change
-
-#     def caloric_intake(self):
-#         "Calculate client's new caloric intake based on goals and maintenance calories"
-
-#         self.caloric_change()  #calculate caloric change
-
-#         #new caloric intake = maintenance calories - caloric change. using + as weight loss will already have been made negative
-#         self.caloric_intake = round(self.TDEE + self.caloric_change)
-#         print("Your new daily caloric intake is ", round(self.caloric_intake))
         
     def caloric_change(self):
         "Calculate caloric change needed for goal weight loss/gain. This is based off that 1 lb = 3500 calories"
