@@ -76,3 +76,18 @@ It's methods include:
 **generate_nutrition_plan()**  
   Generates a detailed nutrition plan based on the calculated macronutrient requirements and customized meal distributions. Displays calories and macronutrients for each meal.
 
+
+### Module 2 - Workout Schedule
+
+Contains the class `WorkoutSchedule`, which helps users create, display, and customize workout schedules based on their preferences.
+
+It's methods include:
+
+**generate_training_split()**  
+  Prompts the user to generate a workout schedule by specifying daily workout time, number of workout days per week, preferred time of day, and activity type.
+
+**display_workout_schedule()**  
+  Displays the workout schedule in an easy-to-read format, showing the planned activity, duration, and time of day for each day.
+
+**customize_workout_schedule()**  
+  Allows the user to customize their workout schedule by editing individual days, changing the activity, duration, and time of day. Ensures input is validated before saving updates.
