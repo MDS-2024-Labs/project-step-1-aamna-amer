@@ -56,19 +56,38 @@ It's methods include:
 
 **caloric_intake():** Calculate client's new caloric intake based on goals and maintenance calories. This will call caloric_change() first to avoid redundancy. Formula used is new caloric intake = maintenance calories - caloric change
 
+
 ## Sub Package 2
 ### Module 1 - Macros
 
-Contains
+Contains the class Macros, which calculates macronutrient requirements and creates personalized nutrition plans based on user goals.
 
 It's methods include:
 
-### Module 2 - Workout
+**calculate_macro_requirements()**
+  Ensures the caloric intake is populated and calculates the macronutrient requirements (proteins, carbs, and fats) based on the client's caloric intake.  
+  Default distribution:  
+  - 30% Protein  
+  - 40% Carbs  
+  - 30% Fats  
 
-Contains
+**customize_macro_distribution()**  
+  Allows the user to distribute macronutrients (proteins, carbs, and fats) across meals (e.g., breakfast, lunch, dinner, snacks). Ensures the distribution percentages are valid.
+
+**generate_nutrition_plan()**  
+  Generates a detailed nutrition plan based on the calculated macronutrient requirements and customized meal distributions. Displays calories and macronutrients for each meal.
+
+### Module 2 - Workout Schedule
+
+Contains the class WorkoutSchedule, which helps users create, display, and customize workout schedules based on their preferences.
 
 It's methods include:
 
+**generate_training_split()**  
+  Prompts the user to generate a workout schedule by specifying daily workout time, number of workout days per week, preferred time of day, and activity type.
 
+**display_workout_schedule()**  
+  Displays the workout schedule in an easy-to-read format, showing the planned activity, duration, and time of day for each day.
 
-
+**customize_workout_schedule()**  
+  Allows the user to customize their workout schedule by editing individual days, changing the activity, duration, and time of day. Ensures input is validated before saving updates.

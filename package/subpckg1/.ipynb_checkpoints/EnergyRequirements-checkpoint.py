@@ -1,4 +1,4 @@
-from subpckg1.PersonalSummary import PersonalSummary
+from package.subpckg1.PersonalSummary import PersonalSummary
 from tabulate import tabulate
 
 class EnergyRequirements(PersonalSummary):
