@@ -11,8 +11,7 @@ class TestEnergyRequirements(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print("Tearing down the test class.")
-        # Clean up shared resources here, if needed.
-        del cls.test_client  # Clean up the test_client object
+        del cls.test_client  
 
     def setUp(self):
         #initialize the EnergyRequirements object
@@ -41,6 +40,7 @@ class TestEnergyRequirements(unittest.TestCase):
         expected_TDEE = expected_RMR * 1.55  
 
         #assertions
+        self.assertIsNotNone(self.energy_requirements.activitylevel)
         self.assertEqual(self.energy_requirements.TDEE, expected_TDEE)
         self.assertEqual(self.energy_requirements.RMR, expected_RMR)  
         self.assertEqual(self.energy_requirements.activitylevel, "Moderately Active")
@@ -58,6 +58,7 @@ class TestEnergyRequirements(unittest.TestCase):
         expected_TDEE = expected_RMR * 1.2  
 
         #assertions 
+        self.assertIsNotNone(self.energy_requirements.activitylevel)
         self.assertEqual(self.energy_requirements.TDEE, expected_TDEE)
         self.assertEqual(self.energy_requirements.RMR, expected_RMR)  
         self.assertEqual(self.energy_requirements.activitylevel, "Sedentary")
@@ -74,9 +75,10 @@ class TestEnergyRequirements(unittest.TestCase):
         expected_RMR = (9.99 * self.energy_requirements.weight) + (6.25 * self.energy_requirements.height) - (4.92 * self.energy_requirements.age) + 5
         expected_TDEE = expected_RMR * 1.725
 
-        #assertions 
+        #assertions
+        self.assertIsNotNone(self.energy_requirements.activitylevel)
         self.assertEqual(self.energy_requirements.TDEE, expected_TDEE)
         self.assertEqual(self.energy_requirements.RMR, expected_RMR)  
         self.assertEqual(self.energy_requirements.activitylevel, "Very Active")
 
-unittest.main(argv=[''], verbosity=2, exit=False)
+#unittest.main(argv=[''], verbosity=2, exit=False)

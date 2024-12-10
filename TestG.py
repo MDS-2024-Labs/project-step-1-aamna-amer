@@ -77,4 +77,4 @@ class TestGoals(unittest.TestCase):
       
 
     
-unittest.main(argv=[''], verbosity=2, exit=False)
+#unittest.main(argv=[''], verbosity=2, exit=False)

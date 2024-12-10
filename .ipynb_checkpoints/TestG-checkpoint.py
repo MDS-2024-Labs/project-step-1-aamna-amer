@@ -15,13 +15,13 @@ class TestGoals(unittest.TestCase):
 
     def setUp(self):
 
-        #set initial test data for each test
+        #set initial test data 
         self.test_client.name = "John"
         self.test_client.height = 170
         self.test_client.weight = 70
         self.test_client.age = 25
         self.test_client.gender = "M"
-        self.test_client.activitylevel = "Moderately Active"  #set default activity level
+        self.test_client.activitylevel = "Moderately Active"  
 
     def tearDown(self):
         pass
@@ -38,6 +38,7 @@ class TestGoals(unittest.TestCase):
         self.test_client.goal_setting()
 
         #assertions
+        self.assertIsNotNone(self.test_client.TDEE)
         self.assertEqual(self.test_client.goal, "weight loss")
         self.assertEqual(self.test_client.weight_loss, 20)
         self.assertEqual(self.test_client.timeline, 90)
@@ -53,6 +54,7 @@ class TestGoals(unittest.TestCase):
         caloric_change_value = self.test_client.caloric_change()
 
         #assertions
+        self.assertIsNotNone(caloric_change_value)
         self.assertEqual(round(caloric_change_value), -583)
 
     def test_caloric_intake(self):
@@ -61,7 +63,7 @@ class TestGoals(unittest.TestCase):
         self.test_client.goal = "weight loss"
         self.test_client.weight_loss = 50
         self.test_client.timeline = 360
-        self.test_client.TDEE = 2000  # Set a fixed TDEE value
+        self.test_client.TDEE = 2000  
 
         #caloric_change()
         self.test_client.caloric_change()
@@ -70,8 +72,9 @@ class TestGoals(unittest.TestCase):
         daily_caloric_intake = self.test_client.caloric_intake()
 
         #assertion
+        self.assertIsNotNone(daily_caloric_intake)
         self.assertEqual(daily_caloric_intake, 1514)  
       
 
     
-unittest.main(argv=[''], verbosity=2, exit=False)
+#unittest.main(argv=[''], verbosity=2, exit=False)

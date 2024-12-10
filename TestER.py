@@ -81,4 +81,4 @@ class TestEnergyRequirements(unittest.TestCase):
         self.assertEqual(self.energy_requirements.RMR, expected_RMR)  
         self.assertEqual(self.energy_requirements.activitylevel, "Very Active")
 
-unittest.main(argv=[''], verbosity=2, exit=False)
+#unittest.main(argv=[''], verbosity=2, exit=False)
