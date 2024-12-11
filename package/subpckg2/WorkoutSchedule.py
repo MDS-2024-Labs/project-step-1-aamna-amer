@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 from tabulate import tabulate
 
 class InvalidSportError(Exception):
     """Exception raised for disallowed, illegal, no-good sports :Pickleball."""
     pass
-=======
+
 #Comments and Documentation implemented with ChatGPT
 
 from tabulate import tabulate
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+
 
 class WorkoutSchedule:
     """
@@ -20,7 +19,7 @@ class WorkoutSchedule:
 
     def generate_training_split(self):
         """
-<<<<<<< HEAD
+
         Prompt the user to generate a workout schedule with error handling for invalid inputs.
         """
         print("Welcome to the Workout Schedule Generator!")
@@ -63,10 +62,11 @@ class WorkoutSchedule:
             if activity:
                 break
             print("Activity cannot be empty. Please enter a valid activity.")
-=======
+
         Prompt the user to generate a workout schedule.
         """
         print("Welcome to the Workout Schedule Generator!")
+        """
         
         # Prompt user for input
         time_daily = int(input("How many minutes do you want to work out daily? "))
@@ -80,7 +80,7 @@ class WorkoutSchedule:
         
         time_of_day = input("Do you prefer working out in the Morning, Afternoon, or Evening? ").capitalize()
         activity = input("What activity will you be doing? ")
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+
 
         # Populate workout schedule
         for day in range(1, days_per_week + 1):
@@ -112,11 +112,10 @@ class WorkoutSchedule:
 
     def customize_workout_schedule(self):
         """
-<<<<<<< HEAD
+
         Allow the user to customize their workout schedule with error handling for invalid inputs.
-=======
         Allow the user to customize their workout schedule.
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+
         """
         if not self.workout_schedule:
             print("No workout schedule found. Please generate one first.")
@@ -136,7 +135,6 @@ class WorkoutSchedule:
                 continue
 
             # Prompt user for new activity details
-<<<<<<< HEAD
             while True:
                 new_activity = input(f"Enter the new activity for {day_to_edit}: ").strip()
                 if new_activity.lower() == "pickleball":
@@ -163,11 +161,11 @@ class WorkoutSchedule:
                     break
                 except ValueError as e:
                     print(f"Invalid input: {e}. Please try again.")
-=======
+
             new_activity = input(f"Enter the new activity for {day_to_edit}: ").strip()
             new_time = input(f"Enter the new time for {day_to_edit} (e.g., 45 minutes): ").strip()
             new_period = input(f"Enter the new time of day for {day_to_edit} (e.g., Morning, Afternoon, Evening): ").capitalize().strip()
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+
 
             # Update the schedule
             self.workout_schedule[day_to_edit] = {
@@ -175,8 +173,8 @@ class WorkoutSchedule:
                 "Time": new_time,
                 "Period": new_period,
             }
-<<<<<<< HEAD
+
             print(f"{day_to_edit} has been updated successfully!")
-=======
+
             print(f"{day_to_edit} has been updated successfully!")
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+

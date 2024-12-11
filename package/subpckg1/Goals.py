@@ -38,11 +38,7 @@ class Goals(EnergyRequirements):
             # For weight gain
             caloric_change_value = (self.weight_gain * 3500) / self.timeline
        
-<<<<<<< HEAD
-        # Store the value in a distinct attribute
-=======
-    # Store the value in a distinct attribute
->>>>>>> 0de86babaa8d186a0c85834a7fa1a081aecf3193
+       # Store the value in a distinct attribute
         self.caloric_change_value = caloric_change_value
         return self.caloric_change_value  # Return the calculated value
    
