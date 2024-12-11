@@ -63,10 +63,10 @@ class WorkoutSchedule:
                 break
             print("Activity cannot be empty. Please enter a valid activity.")
 
-        Prompt the user to generate a workout schedule.
-        """
+        #Prompt the user to generate a workout schedule.
+        
         print("Welcome to the Workout Schedule Generator!")
-        """
+        
         
         # Prompt user for input
         time_daily = int(input("How many minutes do you want to work out daily? "))
